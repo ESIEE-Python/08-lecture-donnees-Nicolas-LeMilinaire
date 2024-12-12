@@ -1,5 +1,9 @@
 #### Imports et définition des variables globales
-import random
+"""
+hsdfkjqhdfkjqhfkjhqf
+"""
+
+
 
 FILENAME = "listes.csv"
 
@@ -15,38 +19,55 @@ def read_data(filename):
         list: le contenu du fichier (1 list par ligne)
     """
     l = []
+    with open(filename, mode='r', buffering=-1, encoding="utf8") as opened :
+
+        for line in opened :
+            l.append([ int(number)  for number in line.strip().split(';')  ])
+
+
     return l
 
 def get_list_k(data, k):
-    l = []
-    return l
+    """,ndksnvsjnsjnsdjdnfksdj"""
+    return data[k]
 
 def get_first(l):
-    return None
+    """kjkshkjsdhvkshvvkjsdh"""
+    return l[0]
 
 def get_last(l):
-    return None
+    """jsdfkjsdhfkjsdhfkjsdhvkj"""
+    return l[-1]
 
 def get_max(l):
-    return None
+    """sjdhjshfsdfisdhfsdhf"""
+    return max(l)
 
 def get_min(l):
-    return None
+    """hsdjhskjfhskjfhskjfhskj"""
+    return min(l)
 
 def get_sum(l):
-    return None
+    """jskdhfkjhfkjdhfkjwdhfsdh"""
+    somme = 0
+    for i in l :
+        somme += i
+    return somme
 
 
 #### Fonction principale
 
 
 def main():
-    pass
-    # data = read_data(FILENAME)
+    """
+    isfkjsdfkjdnfkjdfkjdshf
+    """
+
+    data = read_data(FILENAME)
     # for i, l in enumerate(data):
     #     print(i, l)
-    # k = 37
-    # print(k, get_list_k(data, 37))
+    k = 37
+    print(k, get_list_k(data, 37))
 
 
 if __name__ == "__main__":
